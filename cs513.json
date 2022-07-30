@@ -6495,5 +6495,1282 @@
       }
     ],
     "description": "Mass edit cells in column Facility Type"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Facility Type",
+          "expression": "value",
+          "columnName": "Facility Type",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "Catering/cafe",
+                "l": "Catering/cafe"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "baseColumnName": "Facility Type",
+    "expression": "grel:value.split(\"/\")[1]",
+    "onError": "set-to-blank",
+    "newColumnName": "FT2",
+    "columnInsertIndex": 5,
+    "description": "Create column FT2 at index 5 based on column Facility Type using expression grel:value.split(\"/\")[1]"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Facility Type",
+          "expression": "value",
+          "columnName": "Facility Type",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "Catering/cafe",
+                "l": "Catering/cafe"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Facility Type",
+    "expression": "grel:value.split(\"/\")[0]",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Facility Type using expression grel:value.split(\"/\")[0]"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Facility Type",
+          "expression": "value",
+          "columnName": "Facility Type",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "Slaughter House/ Grocery",
+                "l": "Slaughter House/ Grocery"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "baseColumnName": "Facility Type",
+    "expression": "grel:value.split(\"/\")[1]",
+    "onError": "set-to-blank",
+    "newColumnName": "FT3",
+    "columnInsertIndex": 5,
+    "description": "Create column FT3 at index 5 based on column Facility Type using expression grel:value.split(\"/\")[1]"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Facility Type",
+          "expression": "value",
+          "columnName": "Facility Type",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "Slaughter House/ Grocery",
+                "l": "Slaughter House/ Grocery"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Facility Type",
+    "expression": "grel:value.split(\"/\")[0]",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Facility Type using expression grel:value.split(\"/\")[0]"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Facility Type",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Liquor Consumption On Premises."
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Liquor"
+      }
+    ],
+    "description": "Mass edit cells in column Facility Type"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Facility Type",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Liquor Store"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Liquor"
+      }
+    ],
+    "description": "Mass edit cells in column Facility Type"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Facility Type",
+          "expression": "value",
+          "columnName": "Facility Type",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "Liquore Store/bar",
+                "l": "Liquore Store/bar"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "baseColumnName": "Facility Type",
+    "expression": "grel:value.split(\"/\")[1]",
+    "onError": "set-to-blank",
+    "newColumnName": "FT4",
+    "columnInsertIndex": 5,
+    "description": "Create column FT4 at index 5 based on column Facility Type using expression grel:value.split(\"/\")[1]"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Facility Type",
+          "expression": "value",
+          "columnName": "Facility Type",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "Liquore Store/bar",
+                "l": "Liquore Store/bar"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Facility Type",
+    "expression": "grel:value.split(\"/\")[0]",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Facility Type using expression grel:value.split(\"/\")[0]"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Facility Type",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Liquore Store"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Liquor"
+      }
+    ],
+    "description": "Mass edit cells in column Facility Type"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Facility Type",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Liqour Brewery Tasting"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Brewery"
+      }
+    ],
+    "description": "Mass edit cells in column Facility Type"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Facility Type",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Packaged Liquor"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Liquor"
+      }
+    ],
+    "description": "Mass edit cells in column Facility Type"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Facility Type",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Tap Room/tavern/liquor Store"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Liquor"
+      }
+    ],
+    "description": "Mass edit cells in column Facility Type"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "FT4",
+    "expression": "join ([coalesce(cells['FT4'].value,''),coalesce(cells['FT3'].value,''),coalesce(cells['FT2'].value,''),coalesce(cells['FT1'].value,''),coalesce(cells['FT'].value,'')],'')",
+    "onError": "keep-original",
+    "newColumnName": "FT5",
+    "columnInsertIndex": 6,
+    "description": "Create column FT5 at index 6 based on column FT4 using expression join ([coalesce(cells['FT4'].value,''),coalesce(cells['FT3'].value,''),coalesce(cells['FT2'].value,''),coalesce(cells['FT1'].value,''),coalesce(cells['FT'].value,'')],'')"
+  },
+  {
+    "op": "core/column-reorder",
+    "columnNames": [
+      "Inspection ID",
+      "DBA Name",
+      "AKA Name",
+      "License #",
+      "Facility Type",
+      "FT5",
+      "Risk",
+      "Address",
+      "City",
+      "State",
+      "Zip",
+      "Inspection Date",
+      "Inspection Type",
+      "Results",
+      "Violations",
+      "Latitude",
+      "Longitude",
+      "Location"
+    ],
+    "description": "Reorder columns"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "FT5",
+    "expression": "value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column FT5 using expression value.trim()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "FT5",
+    "expression": "value.toTitlecase()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column FT5 using expression value.toTitlecase()"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "FT5",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Liquor Store"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Liquor"
+      }
+    ],
+    "description": "Mass edit cells in column FT5"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "FT5",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Banquet Halls"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Banquet"
+      }
+    ],
+    "description": "Mass edit cells in column FT5"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "FT5",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Day Care"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Daycare"
+      }
+    ],
+    "description": "Mass edit cells in column FT5"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "FT5",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Grocery"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Grocery Store"
+      }
+    ],
+    "description": "Mass edit cells in column FT5"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Facility Type",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Grocery"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Grocery Store"
+      }
+    ],
+    "description": "Mass edit cells in column Facility Type"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Facility Type",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "After School Care"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "School Care Program"
+      }
+    ],
+    "description": "Mass edit cells in column Facility Type"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Facility Type",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "After School Program"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "School Care Program"
+      }
+    ],
+    "description": "Mass edit cells in column Facility Type"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Facility Type",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Before And After School Program"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "School Care Program"
+      }
+    ],
+    "description": "Mass edit cells in column Facility Type"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Facility Type",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Cafe/store"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Cafe"
+      }
+    ],
+    "description": "Mass edit cells in column Facility Type"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Facility Type",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Candy"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Candy Store"
+      }
+    ],
+    "description": "Mass edit cells in column Facility Type"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Facility Type",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Candy Maker"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Candy Store"
+      }
+    ],
+    "description": "Mass edit cells in column Facility Type"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Facility Type",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Candy Shop"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Candy Store"
+      }
+    ],
+    "description": "Mass edit cells in column Facility Type"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Facility Type",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Catered Events"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Catering"
+      }
+    ],
+    "description": "Mass edit cells in column Facility Type"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Facility Type",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Catering And Wholesale"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Catering"
+      }
+    ],
+    "description": "Mass edit cells in column Facility Type"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Facility Type",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Charter School/cafeteria"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Charter School"
+      }
+    ],
+    "description": "Mass edit cells in column Facility Type"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Facility Type",
+          "expression": "value",
+          "columnName": "Facility Type",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "Church/after School Program",
+                "l": "Church/after School Program"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "baseColumnName": "Facility Type",
+    "expression": "grel:value.split(\"/\")[1]",
+    "onError": "set-to-blank",
+    "newColumnName": "FT1",
+    "columnInsertIndex": 5,
+    "description": "Create column FT1 at index 5 based on column Facility Type using expression grel:value.split(\"/\")[1]"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Facility Type",
+          "expression": "value",
+          "columnName": "Facility Type",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "Church/after School Program",
+                "l": "Church/after School Program"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "FT1",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "after School Program"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "School Care Program"
+      }
+    ],
+    "description": "Mass edit cells in column FT1"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Facility Type",
+          "expression": "value",
+          "columnName": "Facility Type",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "Church/after School Program",
+                "l": "Church/after School Program"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Facility Type",
+    "expression": "grel:value.split(\"/\")[0]",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Facility Type using expression grel:value.split(\"/\")[0]"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Facility Type",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Coffee"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Coffee Shop"
+      }
+    ],
+    "description": "Mass edit cells in column Facility Type"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Facility Type",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Cold/frozen Food Storage"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Restaurant"
+      }
+    ],
+    "description": "Mass edit cells in column Facility Type"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Facility Type",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Wholesale & Retail"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Wholesale"
+      }
+    ],
+    "description": "Mass edit cells in column Facility Type"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Facility Type",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Service Bar/theatre"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Service Bar/Theater"
+      }
+    ],
+    "description": "Mass edit cells in column Facility Type"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Facility Type",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Service Bar/Theater"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Bar/Theater"
+      }
+    ],
+    "description": "Mass edit cells in column Facility Type"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Facility Type",
+          "expression": "value",
+          "columnName": "Facility Type",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "Bar/Theater",
+                "l": "Bar/Theater"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "baseColumnName": "Facility Type",
+    "expression": "grel:value.split(\"/\")[1]",
+    "onError": "set-to-blank",
+    "newColumnName": "FT2",
+    "columnInsertIndex": 5,
+    "description": "Create column FT2 at index 5 based on column Facility Type using expression grel:value.split(\"/\")[1]"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Facility Type",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Bar/Theater"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Bar"
+      }
+    ],
+    "description": "Mass edit cells in column Facility Type"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Facility Type",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Gift/card Shop With Candy"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Gift Shop"
+      }
+    ],
+    "description": "Mass edit cells in column Facility Type"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Facility Type",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Grocery(sushi Prep)"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Grocery Store"
+      }
+    ],
+    "description": "Mass edit cells in column Facility Type"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Facility Type",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Ice Cream Parlor"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Ice Cream"
+      }
+    ],
+    "description": "Mass edit cells in column Facility Type"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Facility Type",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Ice Cream Shop"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Ice Cream"
+      }
+    ],
+    "description": "Mass edit cells in column Facility Type"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Facility Type",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Juice And Salad Bar"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Juice Bar"
+      }
+    ],
+    "description": "Mass edit cells in column Facility Type"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Facility Type",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Museum/gallery"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Museum"
+      }
+    ],
+    "description": "Mass edit cells in column Facility Type"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Facility Type",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Paleteria"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Ice Cream"
+      }
+    ],
+    "description": "Mass edit cells in column Facility Type"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Facility Type",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Paleteria /icecream Shop"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Ice Cream"
+      }
+    ],
+    "description": "Mass edit cells in column Facility Type"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Facility Type",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Push Carts"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Mobile Food"
+      }
+    ],
+    "description": "Mass edit cells in column Facility Type"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Facility Type",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Pushcart"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Mobile Food"
+      }
+    ],
+    "description": "Mass edit cells in column Facility Type"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Facility Type",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Retail Food/gas Station"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Gas Station"
+      }
+    ],
+    "description": "Mass edit cells in column Facility Type"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Facility Type",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Retail Wine/wine Bar"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Liquor"
+      }
+    ],
+    "description": "Mass edit cells in column Facility Type"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Facility Type",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Rooftop/restaurant"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Rooftop"
+      }
+    ],
+    "description": "Mass edit cells in column Facility Type"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Facility Type",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Wrigley Rooftop"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Rooftop"
+      }
+    ],
+    "description": "Mass edit cells in column Facility Type"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Facility Type",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Rest/gym"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Fitness Center"
+      }
+    ],
+    "description": "Mass edit cells in column Facility Type"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "FT2",
+    "expression": "join ([coalesce(cells['FT2'].value,''),coalesce(cells['FT1'].value,''),coalesce(cells['FT5'].value,'')],'')",
+    "onError": "keep-original",
+    "newColumnName": "Facility Type Secondary",
+    "columnInsertIndex": 6,
+    "description": "Create column Facility Type Secondary at index 6 based on column FT2 using expression join ([coalesce(cells['FT2'].value,''),coalesce(cells['FT1'].value,''),coalesce(cells['FT5'].value,'')],'')"
+  },
+  {
+    "op": "core/column-reorder",
+    "columnNames": [
+      "Inspection ID",
+      "DBA Name",
+      "AKA Name",
+      "License #",
+      "Facility Type",
+      "Facility Type Secondary",
+      "Risk",
+      "Address",
+      "City",
+      "State",
+      "Zip",
+      "Inspection Date",
+      "Inspection Type",
+      "Results",
+      "Violations",
+      "Latitude",
+      "Longitude",
+      "Location"
+    ],
+    "description": "Reorder columns"
   }
 ]
