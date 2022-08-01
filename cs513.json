@@ -8103,5 +8103,94 @@
     "newColumnName": "Facility ID",
     "columnInsertIndex": 2,
     "description": "Create column Facility ID at index 2 based on column DBA Name using expression grel:sha1(value + cells[\"License #\"].value + cells[\"Address\"].value)"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Inspection Date",
+    "expression": "value.toDate()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Inspection Date using expression value.toDate()"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "AKA Name",
+    "description": "Remove column AKA Name"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Latitude",
+    "description": "Remove column Latitude"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Longitude",
+    "description": "Remove column Longitude"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Location",
+    "description": "Remove column Location"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Results",
+    "expression": "value.toTitlecase()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Results using expression value.toTitlecase()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Inspection Type",
+    "expression": "value.toTitlecase()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Inspection Type using expression value.toTitlecase()"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Inspection Type",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Out Of Business",
+          "Out Ofbusiness"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Out Of Business"
+      },
+      {
+        "from": [
+          "Task Force",
+          "Taskforce"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Task Force"
+      }
+    ],
+    "description": "Mass edit cells in column Inspection Type"
   }
 ]
