@@ -26,3 +26,24 @@ from
 
 -- calculate average risk and group by FacilityType
 select FacilityType, avg(Risk) as AverageRisk from RiskPerFacilityId group by FacilityType;
+
+--
+--
+-- Query run against the Original dataset
+--
+-- create temp table FacilityTypeUnion as
+-- select FacilityType, Risk, InspectionDate from Food_Inspections;
+-- 
+-- create temp table RiskPerFacilityType as
+-- select
+-- 	FacilityType, Risk, InspectionDate
+-- from
+-- 	(
+-- 		select
+-- 			FacilityType, Risk, InspectionDate,
+-- 			row_number() over (partition by FacilityType order by InspectionDate desc) row_num
+-- 		from FacilityTypeUnion
+-- 	) derivedTable where derivedTable.row_num = 1;
+-- 
+-- -- calculate average risk and group by FacilityType
+-- select FacilityType, avg(Risk) as AverageRisk from RiskPerFacilityType group by FacilityType;
