@@ -1,0 +1,28 @@
+-- Create a union all between the Facility Type
+-- and FacilityTypeSecondary Columns into one table
+create temp table FacilityTypeUnion as
+select FacilityId, FacilityType, Risk, InspectionDate from
+(
+	select FacilityId, FacilityType, Risk, InspectionDate from FoodInspections
+	union all
+	select
+		FacilityId, FacilityTypeSecondary, Risk, InspectionDate
+		from FoodInspections
+		where FacilityTypeSecondary is not null
+);
+
+-- Remove rows with the same FacilityIds by
+-- only taking the latest InspectionDate
+create temp table RiskPerFacilityId as
+select
+	FacilityId, FacilityType, Risk, InspectionDate
+from
+	(
+		select
+			FacilityId, FacilityType, Risk, InspectionDate,
+			row_number() over (partition by FacilityId order by InspectionDate desc) row_num
+		from FacilityTypeUnion
+	) derivedTable where derivedTable.row_num = 1;
+
+-- calculate average risk and group by FacilityType
+select FacilityType, avg(Risk) as AverageRisk from RiskPerFacilityId group by FacilityType;
