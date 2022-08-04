@@ -8192,5 +8192,11 @@
       }
     ],
     "description": "Mass edit cells in column Inspection Type"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "License #",
+    "newColumnName": "License Number",
+    "description": "Rename column License # to License Number"
   }
 ]
