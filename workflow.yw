@@ -1,0 +1,516 @@
+#@begin Parallel_OR #@desc Parallel OpenRefine Workflow
+#@param expression:grel:value.replace(/.&./,_"/")
+#@param expression:grel:value.replace(/.*./,"Dollar_Store")
+#@param expression:grel:value.replace(/.*./,_"Candy_Store")
+#@param expression:grel:value.replace(/.*./,"Convenience_Store")
+#@param expression:grel:value.replace(/.*./,"Mobile_Food")
+#@param expression:grel:if(value==null,"Restaurant",value)
+#@param expression:value
+#@param expression:value.toTitlecase()
+#@param expression:value.trim()
+#@param expression:grel:if(value==null,"Liquor",value)
+#@param expression:grel:value.split("/")[0]
+#@param expression:grel:if(value==null,"Daycare",value)
+#@param expression:grel:if(value==null,"Bakery",value)
+#@param expression:grel:value.replace(/.*./,"Liquor")
+#@param expression:grel:value.replace(/.*./,"Restaurant")
+#@param expression:value.toNumber()
+#@param expression:grel:if(value==null,"Bar",value)
+#@param expression:grel:value.replace(/.*./,"Banquet")
+#@param expression:grel:value.replace(/.*./,_"Daycare")
+#@param expression:grel:if(value==null,"Grocery_Store",value)
+#@param expression:grel:value.replace(/.*./,"Gas_Station")
+#@param mode:row-based
+#@param expression:grel:value.replace(/.And./,_"/")
+#@param expression:value.toDate()
+#@param expression:grel:value.replace(/.*./,"Grocery_Store")
+#@in Facility_Type_Secondary_2
+#@in Facility_Type_2
+#@in Address_1
+#@in Facility_Type_Secondary_5
+#@in Facility_Type_35
+#@in Location
+#@in Facility_Type_5
+#@in Results
+#@in Facility_Type_12
+#@in Risk_1
+#@in Facility_Type_30
+#@in Facility_Type_4
+#@in Latitude
+#@in Facility_Type_13
+#@in City_1
+#@in Facility_Type_8
+#@in City_2
+#@in Facility_Type_21
+#@in Address
+#@in Address_2
+#@in Facility_Type_32
+#@in Facility_Type_23
+#@in Facility_Type_1
+#@in Facility_Type_6
+#@in Risk_5
+#@in Facility_Type_22
+#@in Facility_Type_19
+#@in Facility_Type_20
+#@in Facility_Type_16
+#@in Facility_Type_15
+#@in Facility_Type_37
+#@in License_#_2
+#@in AKA_Name
+#@in License_#
+#@in Facility_Type_33
+#@in DBA_Name
+#@in City
+#@in Facility_Type_31
+#@in Facility_Type_29
+#@in Facility_Type_17
+#@in Facility_Type_28
+#@in Facility_Type
+#@in City_4
+#@in Facility_Type_10
+#@in Risk_4
+#@in Facility_Type_34
+#@in Inspection_ID
+#@in DBA_Name_1
+#@in DBA_Name_2
+#@in Facility_Type_24
+#@in Facility_Type_27
+#@in City_5
+#@in Inspection_Type
+#@in City_3
+#@in Facility_Type_26
+#@in Facility_Type_Secondary_3
+#@in DBA_Name_3
+#@in Facility_Type_11
+#@in Facility_Type_25
+#@in Starred_Rows
+#@in Facility_Type_Secondary
+#@in Facility_Type_36
+#@in Inspection_Type_1
+#@in Risk_2
+#@in Zip
+#@in Inspection_Date
+#@in Risk_3
+#@in Facility_Type_18
+#@in Facility_Type_14
+#@in Longitude
+#@in Facility_Type_7
+#@in Facility_Type_3
+#@in License_#_1
+#@in Risk
+#@in Facility_Type_Secondary_1
+#@in Facility_Type_38
+#@in Facility_Type_Secondary_4
+#@in Facility_Type_9
+#@out CleanData
+#@begin core/text-transform0 #@desc Text transform on cells in column Facility Type using expression value.toTitlecase()
+#@param expression:value.toTitlecase()
+#@in Facility_Type
+#@out Facility_Type_1
+#@end core/text-transform0
+#@begin core/mass-edit1 #@desc Mass edit cells in column Facility Type
+#@param expression:value
+#@in Facility_Type_1
+#@out Facility_Type_2
+#@end core/mass-edit1
+#@begin core/mass-edit2 #@desc Mass edit cells in column Facility Type
+#@param expression:value
+#@in Facility_Type_2
+#@out Facility_Type_3
+#@end core/mass-edit2
+#@begin core/mass-edit3 #@desc Mass edit cells in column Facility Type
+#@param expression:value
+#@in Facility_Type_3
+#@out Facility_Type_4
+#@end core/mass-edit3
+#@begin core/mass-edit4 #@desc Mass edit cells in column Facility Type
+#@param expression:value
+#@in Facility_Type_4
+#@out Facility_Type_5
+#@end core/mass-edit4
+#@begin core/mass-edit5 #@desc Mass edit cells in column Facility Type
+#@param expression:value
+#@in Facility_Type_5
+#@out Facility_Type_6
+#@end core/mass-edit5
+#@begin core/mass-edit6 #@desc Mass edit cells in column Facility Type
+#@param expression:value
+#@in Facility_Type_6
+#@out Facility_Type_7
+#@end core/mass-edit6
+#@begin core/mass-edit7 #@desc Mass edit cells in column Facility Type
+#@param expression:value
+#@in Facility_Type_7
+#@out Facility_Type_8
+#@end core/mass-edit7
+#@begin core/mass-edit8 #@desc Mass edit cells in column Facility Type
+#@param expression:value
+#@in Facility_Type_8
+#@out Facility_Type_9
+#@end core/mass-edit8
+#@begin core/mass-edit9 #@desc Mass edit cells in column Facility Type
+#@param expression:value
+#@in Facility_Type_9
+#@out Facility_Type_10
+#@end core/mass-edit9
+#@begin core/text-transform10 #@desc Text transform on cells in column Facility Type using expression grel:value.replace(/.*./, \"Daycare\")
+#@param expression:grel:value.replace(/.*./,_"Daycare")
+#@in Facility_Type_10
+#@out Facility_Type_11
+#@end core/text-transform10
+#@begin core/text-transform11 #@desc Text transform on cells in column Facility Type using expression grel:value.replace(/.And./, \"/\")
+#@param expression:grel:value.replace(/.And./,_"/")
+#@in Facility_Type_11
+#@out Facility_Type_12
+#@end core/text-transform11
+#@begin core/text-transform12 #@desc Text transform on cells in column Facility Type using expression grel:value.replace(/.&./, \"/\")
+#@param expression:grel:value.replace(/.&./,_"/")
+#@in Facility_Type_12
+#@out Facility_Type_13
+#@end core/text-transform12
+#@begin core/mass-edit13 #@desc Mass edit cells in column Facility Type
+#@param expression:value
+#@in Facility_Type_13
+#@out Facility_Type_14
+#@end core/mass-edit13
+#@begin core/text-transform14 #@desc Text transform on cells in column Facility Type using expression grel:value.replace(/.*./, \"Candy Store\")
+#@param expression:grel:value.replace(/.*./,_"Candy_Store")
+#@in Facility_Type_14
+#@out Facility_Type_15
+#@end core/text-transform14
+#@begin core/mass-edit15 #@desc Mass edit cells in column Facility Type
+#@param expression:value
+#@in Facility_Type_15
+#@out Facility_Type_16
+#@end core/mass-edit15
+#@begin core/mass-edit16 #@desc Mass edit cells in column Facility Type
+#@param expression:value
+#@in Facility_Type_16
+#@out Facility_Type_17
+#@end core/mass-edit16
+#@begin core/mass-edit17 #@desc Mass edit cells in column Facility Type
+#@param expression:value
+#@in Facility_Type_17
+#@out Facility_Type_18
+#@end core/mass-edit17
+#@begin core/text-transform18 #@desc Text transform on cells in column Facility Type using expression grel:value.split(\"/\")[0]
+#@param expression:grel:value.split("/")[0]
+#@in Facility_Type_18
+#@out Facility_Type_19
+#@end core/text-transform18
+#@begin core/text-transform19 #@desc Text transform on cells in column Facility Type Secondary using expression value.trim()
+#@param expression:value.trim()
+#@in Facility_Type_Secondary
+#@out Facility_Type_Secondary_1
+#@end core/text-transform19
+#@begin core/text-transform20 #@desc Text transform on cells in column Facility Type Secondary using expression value.toTitlecase()
+#@param expression:value.toTitlecase()
+#@in Facility_Type_Secondary_1
+#@out Facility_Type_Secondary_2
+#@end core/text-transform20
+#@begin core/text-transform21 #@desc Text transform on cells in column Facility Type using expression value.trim()
+#@param expression:value.trim()
+#@in Facility_Type_19
+#@out Facility_Type_20
+#@end core/text-transform21
+#@begin core/text-transform22 #@desc Text transform on cells in column Facility Type using expression grel:value.replace(/.*./,\"Mobile Food\")
+#@param expression:grel:value.replace(/.*./,"Mobile_Food")
+#@in Facility_Type_20
+#@out Facility_Type_21
+#@end core/text-transform22
+#@begin core/text-transform23 #@desc Text transform on cells in column Facility Type using expression grel:value.replace(/.*./,\"Restaurant\")
+#@param expression:grel:value.replace(/.*./,"Restaurant")
+#@in Facility_Type_21
+#@out Facility_Type_22
+#@end core/text-transform23
+#@begin core/text-transform24 #@desc Text transform on cells in column Facility Type using expression grel:value.replace(/.*./,\"Mobile Food\")
+#@param expression:grel:value.replace(/.*./,"Mobile_Food")
+#@in Facility_Type_22
+#@out Facility_Type_23
+#@end core/text-transform24
+#@begin core/text-transform25 #@desc Text transform on cells in column Facility Type using expression grel:value.replace(/.*./,\"Dollar Store\")
+#@param expression:grel:value.replace(/.*./,"Dollar_Store")
+#@in Facility_Type_23
+#@out Facility_Type_24
+#@end core/text-transform25
+#@begin core/text-transform26 #@desc Text transform on cells in column Facility Type using expression grel:value.replace(/.*./,\"Gas Station\")
+#@param expression:grel:value.replace(/.*./,"Gas_Station")
+#@in Facility_Type_24
+#@out Facility_Type_25
+#@end core/text-transform26
+#@begin core/text-transform27 #@desc Text transform on cells in column Facility Type using expression grel:value.replace(/.*./,\"Liquor\")
+#@param expression:grel:value.replace(/.*./,"Liquor")
+#@in Facility_Type_25
+#@out Facility_Type_26
+#@end core/text-transform27
+#@begin core/text-transform28 #@desc Text transform on cells in column Facility Type using expression grel:value.replace(/.*./,\"Grocery Store\")
+#@param expression:grel:value.replace(/.*./,"Grocery_Store")
+#@in Facility_Type_26
+#@out Facility_Type_27
+#@end core/text-transform28
+#@begin core/mass-edit29 #@desc Mass edit cells in column Facility Type Secondary
+#@param expression:value
+#@in Facility_Type_Secondary_2
+#@out Facility_Type_Secondary_3
+#@end core/mass-edit29
+#@begin core/mass-edit30 #@desc Mass edit cells in column Facility Type Secondary
+#@param expression:value
+#@in Facility_Type_Secondary_3
+#@out Facility_Type_Secondary_4
+#@end core/mass-edit30
+#@begin core/mass-edit31 #@desc Mass edit cells in column Facility Type Secondary
+#@param expression:value
+#@in Facility_Type_Secondary_4
+#@out Facility_Type_Secondary_5
+#@end core/mass-edit31
+#@begin core/text-transform32 #@desc Text transform on cells in column Facility Type using expression grel:value.replace(/.*./,\"Banquet\")
+#@param expression:grel:value.replace(/.*./,"Banquet")
+#@in Facility_Type_27
+#@out Facility_Type_28
+#@end core/text-transform32
+#@begin core/text-transform33 #@desc Text transform on cells in column Facility Type Secondary using expression grel:value.replace(/.*./,\"Banquet\")
+#@param expression:grel:value.replace(/.*./,"Banquet")
+#@in Facility_Type_Secondary_5
+#@out Facility_Type_Secondary_6
+#@end core/text-transform33
+#@begin core/text-transform34 #@desc Text transform on cells in column Facility Type using expression grel:value.replace(/.*./,\"Convenience Store\")
+#@param expression:grel:value.replace(/.*./,"Convenience_Store")
+#@in Facility_Type_28
+#@out Facility_Type_29
+#@end core/text-transform34
+#@begin core/row-removal35 #@desc Remove rows
+#@param mode:row-based
+#@in Risk
+#@out Risk_1
+#@end core/row-removal35
+#@begin core/row-removal36 #@desc Remove rows
+#@param mode:row-based
+#@in Risk_1
+#@out Risk_2
+#@end core/row-removal36
+#@begin core/mass-edit37 #@desc Mass edit cells in column Risk
+#@param expression:value
+#@in Risk_2
+#@out Risk_3
+#@end core/mass-edit37
+#@begin core/mass-edit38 #@desc Mass edit cells in column Risk
+#@param expression:value
+#@in Risk_3
+#@out Risk_4
+#@end core/mass-edit38
+#@begin core/mass-edit39 #@desc Mass edit cells in column Risk
+#@param expression:value
+#@in Risk_4
+#@out Risk_5
+#@end core/mass-edit39
+#@begin core/text-transform40 #@desc Text transform on cells in column Facility Type using expression grel:if(value==null,\"Restaurant\",value)
+#@param expression:grel:if(value==null,"Restaurant",value)
+#@in Facility_Type_29
+#@out Facility_Type_30
+#@end core/text-transform40
+#@begin core/text-transform41 #@desc Text transform on cells in column Facility Type using expression grel:if(value==null,\"Grocery Store\",value)
+#@param expression:grel:if(value==null,"Grocery_Store",value)
+#@in Facility_Type_30
+#@out Facility_Type_31
+#@end core/text-transform41
+#@begin core/text-transform42 #@desc Text transform on cells in column Facility Type using expression grel:if(value==null,\"Grocery Store\",value)
+#@param expression:grel:if(value==null,"Grocery_Store",value)
+#@in Facility_Type_31
+#@out Facility_Type_32
+#@end core/text-transform42
+#@begin core/text-transform43 #@desc Text transform on cells in column Facility Type using expression grel:if(value==null,\"Restaurant\",value)
+#@param expression:grel:if(value==null,"Restaurant",value)
+#@in Facility_Type_32
+#@out Facility_Type_33
+#@end core/text-transform43
+#@begin core/text-transform44 #@desc Text transform on cells in column Facility Type using expression grel:if(value==null,\"Liquor\",value)
+#@param expression:grel:if(value==null,"Liquor",value)
+#@in Facility_Type_33
+#@out Facility_Type_34
+#@end core/text-transform44
+#@begin core/text-transform45 #@desc Text transform on cells in column Facility Type using expression grel:if(value==null,\"Grocery Store\",value)
+#@param expression:grel:if(value==null,"Grocery_Store",value)
+#@in Facility_Type_34
+#@out Facility_Type_35
+#@end core/text-transform45
+#@begin core/text-transform46 #@desc Text transform on cells in column Facility Type using expression grel:if(value==null,\"Daycare\",value)
+#@param expression:grel:if(value==null,"Daycare",value)
+#@in Facility_Type_35
+#@out Facility_Type_36
+#@end core/text-transform46
+#@begin core/text-transform47 #@desc Text transform on cells in column Facility Type using expression grel:if(value==null,\"Bakery\",value)
+#@param expression:grel:if(value==null,"Bakery",value)
+#@in Facility_Type_36
+#@out Facility_Type_37
+#@end core/text-transform47
+#@begin core/text-transform48 #@desc Text transform on cells in column Facility Type using expression grel:if(value==null,\"Bar\",value)
+#@param expression:grel:if(value==null,"Bar",value)
+#@in Facility_Type_37
+#@out Facility_Type_38
+#@end core/text-transform48
+#@begin core/text-transform49 #@desc Text transform on cells in column Risk using expression value.toNumber()
+#@param expression:value.toNumber()
+#@in Risk_5
+#@out Risk_6
+#@end core/text-transform49
+#@begin core/text-transform50 #@desc Text transform on cells in column License # using expression value.toNumber()
+#@param expression:value.toNumber()
+#@in License_#
+#@out License_#_1
+#@end core/text-transform50
+#@begin core/text-transform51 #@desc Text transform on cells in column Inspection ID using expression value.toNumber()
+#@param expression:value.toNumber()
+#@in Inspection_ID
+#@out Inspection_ID_1
+#@end core/text-transform51
+#@begin core/text-transform52 #@desc Text transform on cells in column Zip using expression value.toNumber()
+#@param expression:value.toNumber()
+#@in Zip
+#@out Zip_1
+#@end core/text-transform52
+#@begin core/text-transform53 #@desc Text transform on cells in column City using expression value.toTitlecase()
+#@param expression:value.toTitlecase()
+#@in City
+#@out City_1
+#@end core/text-transform53
+#@begin core/mass-edit54 #@desc Mass edit cells in column City
+#@param expression:value
+#@in City_1
+#@out City_2
+#@end core/mass-edit54
+#@begin core/mass-edit55 #@desc Mass edit cells in column City
+#@param expression:value
+#@in City_2
+#@out City_3
+#@end core/mass-edit55
+#@begin core/mass-edit56 #@desc Mass edit cells in column City
+#@param expression:value
+#@in City_3
+#@out City_4
+#@end core/mass-edit56
+#@begin core/mass-edit57 #@desc Mass edit cells in column City
+#@param expression:value
+#@in City_4
+#@out City_5
+#@end core/mass-edit57
+#@begin core/row-removal58 #@desc Remove rows
+#@param mode:row-based
+#@in Starred_Rows
+#@out Starred_Rows_1
+#@end core/row-removal58
+#@begin core/row-removal59 #@desc Remove rows
+#@param mode:row-based
+#@in City_5
+#@out City_6
+#@end core/row-removal59
+#@begin core/row-removal60 #@desc Remove rows
+#@param mode:row-based
+#@in License_#_1
+#@out License_#_2
+#@end core/row-removal60
+#@begin core/row-removal61 #@desc Remove rows
+#@param mode:row-based
+#@in License_#_2
+#@out License_#_3
+#@end core/row-removal61
+#@begin core/row-removal62 #@desc Remove rows
+#@param mode:row-based
+#@in Facility_Type_38
+#@out Facility_Type_39
+#@end core/row-removal62
+#@begin core/text-transform63 #@desc Text transform on cells in column DBA Name using expression value.toTitlecase()
+#@param expression:value.toTitlecase()
+#@in DBA_Name
+#@out DBA_Name_1
+#@end core/text-transform63
+#@begin core/mass-edit64 #@desc Mass edit cells in column DBA Name
+#@param expression:value
+#@in DBA_Name_1
+#@out DBA_Name_2
+#@end core/mass-edit64
+#@begin core/mass-edit65 #@desc Mass edit cells in column DBA Name
+#@param expression:value
+#@in DBA_Name_2
+#@out DBA_Name_3
+#@end core/mass-edit65
+#@begin core/mass-edit66 #@desc Mass edit cells in column DBA Name
+#@param expression:value
+#@in DBA_Name_3
+#@out DBA_Name_4
+#@end core/mass-edit66
+#@begin core/text-transform67 #@desc Text transform on cells in column Address using expression value.toTitlecase()
+#@param expression:value.toTitlecase()
+#@in Address
+#@out Address_1
+#@end core/text-transform67
+#@begin core/mass-edit68 #@desc Mass edit cells in column Address
+#@param expression:value
+#@in Address_1
+#@out Address_2
+#@end core/mass-edit68
+#@begin core/mass-edit69 #@desc Mass edit cells in column Address
+#@param expression:value
+#@in Address_2
+#@out Address_3
+#@end core/mass-edit69
+#@begin core/text-transform70 #@desc Text transform on cells in column Inspection Date using expression value.toDate()
+#@param expression:value.toDate()
+#@in Inspection_Date
+#@out Inspection_Date_1
+#@end core/text-transform70
+#@begin core/column-removal71 #@desc Remove column AKA Name
+#@in AKA_Name
+#@out remove-AKA_Name
+#@end core/column-removal71
+#@begin core/column-removal72 #@desc Remove column Latitude
+#@in Latitude
+#@out remove-Latitude
+#@end core/column-removal72
+#@begin core/column-removal73 #@desc Remove column Longitude
+#@in Longitude
+#@out remove-Longitude
+#@end core/column-removal73
+#@begin core/column-removal74 #@desc Remove column Location
+#@in Location
+#@out remove-Location
+#@end core/column-removal74
+#@begin core/text-transform75 #@desc Text transform on cells in column Results using expression value.toTitlecase()
+#@param expression:value.toTitlecase()
+#@in Results
+#@out Results_1
+#@end core/text-transform75
+#@begin core/text-transform76 #@desc Text transform on cells in column Inspection Type using expression value.toTitlecase()
+#@param expression:value.toTitlecase()
+#@in Inspection_Type
+#@out Inspection_Type_1
+#@end core/text-transform76
+#@begin core/mass-edit77 #@desc Mass edit cells in column Inspection Type
+#@param expression:value
+#@in Inspection_Type_1
+#@out Inspection_Type_2
+#@end core/mass-edit77
+#@begin CombineDataCleaningChanges
+#@in Facility_Type_39
+#@in Facility_Type_Secondary_6
+#@in Risk_6
+#@in License_#_3
+#@in Inspection_ID_1
+#@in Zip_1
+#@in City_6
+#@in Starred_Rows_1
+#@in DBA_Name_4
+#@in Address_3
+#@in Inspection_Date_1
+#@in AKA_Name
+#@in remove-AKA_Name
+#@in Latitude
+#@in remove-Latitude
+#@in Longitude
+#@in remove-Longitude
+#@in Location
+#@in remove-Location
+#@in Results_1
+#@in Inspection_Type_2
+#@out CleanData
+#@end CombineDataCleaningChanges
+#@end Parallel_OR

@@ -1,0 +1,487 @@
+
+/* Start of top-level graph */
+digraph Workflow {
+rankdir=TB
+
+/* Title for graph */
+fontname=Helvetica; fontsize=18; labelloc=t
+label=Parallel_OR
+
+/* Start of double cluster for drawing box around nodes in workflow */
+subgraph cluster_workflow_box_outer { label=""; color=black; penwidth=2
+subgraph cluster_workflow_box_inner { label=""; penwidth=0
+
+/* Style for nodes representing atomic programs in workflow */
+node[shape=box style=filled fillcolor="#CCFFCC" peripheries=1 fontname=Helvetica]
+
+/* Nodes representing atomic programs in workflow */
+"core/text-transform0" [shape=record rankdir=LR label="{<f0> core/text-transform0 |<f1> Text transform on cells in column Facility Type using expression value.toTitlecase()}"];
+"core/mass-edit1" [shape=record rankdir=LR label="{<f0> core/mass-edit1 |<f1> Mass edit cells in column Facility Type}"];
+"core/mass-edit2" [shape=record rankdir=LR label="{<f0> core/mass-edit2 |<f1> Mass edit cells in column Facility Type}"];
+"core/mass-edit3" [shape=record rankdir=LR label="{<f0> core/mass-edit3 |<f1> Mass edit cells in column Facility Type}"];
+"core/mass-edit4" [shape=record rankdir=LR label="{<f0> core/mass-edit4 |<f1> Mass edit cells in column Facility Type}"];
+"core/mass-edit5" [shape=record rankdir=LR label="{<f0> core/mass-edit5 |<f1> Mass edit cells in column Facility Type}"];
+"core/mass-edit6" [shape=record rankdir=LR label="{<f0> core/mass-edit6 |<f1> Mass edit cells in column Facility Type}"];
+"core/mass-edit7" [shape=record rankdir=LR label="{<f0> core/mass-edit7 |<f1> Mass edit cells in column Facility Type}"];
+"core/mass-edit8" [shape=record rankdir=LR label="{<f0> core/mass-edit8 |<f1> Mass edit cells in column Facility Type}"];
+"core/mass-edit9" [shape=record rankdir=LR label="{<f0> core/mass-edit9 |<f1> Mass edit cells in column Facility Type}"];
+"core/text-transform10" [shape=record rankdir=LR label="{<f0> core/text-transform10 |<f1> Text transform on cells in column Facility Type using expression grel\:value.replace(/.*./, \"Daycare\")}"];
+"core/text-transform11" [shape=record rankdir=LR label="{<f0> core/text-transform11 |<f1> Text transform on cells in column Facility Type using expression grel\:value.replace(/.And./, \"/\")}"];
+"core/text-transform12" [shape=record rankdir=LR label="{<f0> core/text-transform12 |<f1> Text transform on cells in column Facility Type using expression grel\:value.replace(/.&./, \"/\")}"];
+"core/mass-edit13" [shape=record rankdir=LR label="{<f0> core/mass-edit13 |<f1> Mass edit cells in column Facility Type}"];
+"core/text-transform14" [shape=record rankdir=LR label="{<f0> core/text-transform14 |<f1> Text transform on cells in column Facility Type using expression grel\:value.replace(/.*./, \"Candy Store\")}"];
+"core/mass-edit15" [shape=record rankdir=LR label="{<f0> core/mass-edit15 |<f1> Mass edit cells in column Facility Type}"];
+"core/mass-edit16" [shape=record rankdir=LR label="{<f0> core/mass-edit16 |<f1> Mass edit cells in column Facility Type}"];
+"core/mass-edit17" [shape=record rankdir=LR label="{<f0> core/mass-edit17 |<f1> Mass edit cells in column Facility Type}"];
+"core/text-transform18" [shape=record rankdir=LR label="{<f0> core/text-transform18 |<f1> Text transform on cells in column Facility Type using expression grel\:value.split(\"/\")[0]}"];
+"core/text-transform19" [shape=record rankdir=LR label="{<f0> core/text-transform19 |<f1> Text transform on cells in column Facility Type Secondary using expression value.trim()}"];
+"core/text-transform20" [shape=record rankdir=LR label="{<f0> core/text-transform20 |<f1> Text transform on cells in column Facility Type Secondary using expression value.toTitlecase()}"];
+"core/text-transform21" [shape=record rankdir=LR label="{<f0> core/text-transform21 |<f1> Text transform on cells in column Facility Type using expression value.trim()}"];
+"core/text-transform22" [shape=record rankdir=LR label="{<f0> core/text-transform22 |<f1> Text transform on cells in column Facility Type using expression grel\:value.replace(/.*./,\"Mobile Food\")}"];
+"core/text-transform23" [shape=record rankdir=LR label="{<f0> core/text-transform23 |<f1> Text transform on cells in column Facility Type using expression grel\:value.replace(/.*./,\"Restaurant\")}"];
+"core/text-transform24" [shape=record rankdir=LR label="{<f0> core/text-transform24 |<f1> Text transform on cells in column Facility Type using expression grel\:value.replace(/.*./,\"Mobile Food\")}"];
+"core/text-transform25" [shape=record rankdir=LR label="{<f0> core/text-transform25 |<f1> Text transform on cells in column Facility Type using expression grel\:value.replace(/.*./,\"Dollar Store\")}"];
+"core/text-transform26" [shape=record rankdir=LR label="{<f0> core/text-transform26 |<f1> Text transform on cells in column Facility Type using expression grel\:value.replace(/.*./,\"Gas Station\")}"];
+"core/text-transform27" [shape=record rankdir=LR label="{<f0> core/text-transform27 |<f1> Text transform on cells in column Facility Type using expression grel\:value.replace(/.*./,\"Liquor\")}"];
+"core/text-transform28" [shape=record rankdir=LR label="{<f0> core/text-transform28 |<f1> Text transform on cells in column Facility Type using expression grel\:value.replace(/.*./,\"Grocery Store\")}"];
+"core/mass-edit29" [shape=record rankdir=LR label="{<f0> core/mass-edit29 |<f1> Mass edit cells in column Facility Type Secondary}"];
+"core/mass-edit30" [shape=record rankdir=LR label="{<f0> core/mass-edit30 |<f1> Mass edit cells in column Facility Type Secondary}"];
+"core/mass-edit31" [shape=record rankdir=LR label="{<f0> core/mass-edit31 |<f1> Mass edit cells in column Facility Type Secondary}"];
+"core/text-transform32" [shape=record rankdir=LR label="{<f0> core/text-transform32 |<f1> Text transform on cells in column Facility Type using expression grel\:value.replace(/.*./,\"Banquet\")}"];
+"core/text-transform33" [shape=record rankdir=LR label="{<f0> core/text-transform33 |<f1> Text transform on cells in column Facility Type Secondary using expression grel\:value.replace(/.*./,\"Banquet\")}"];
+"core/text-transform34" [shape=record rankdir=LR label="{<f0> core/text-transform34 |<f1> Text transform on cells in column Facility Type using expression grel\:value.replace(/.*./,\"Convenience Store\")}"];
+"core/row-removal35" [shape=record rankdir=LR label="{<f0> core/row-removal35 |<f1> Remove rows}"];
+"core/row-removal36" [shape=record rankdir=LR label="{<f0> core/row-removal36 |<f1> Remove rows}"];
+"core/mass-edit37" [shape=record rankdir=LR label="{<f0> core/mass-edit37 |<f1> Mass edit cells in column Risk}"];
+"core/mass-edit38" [shape=record rankdir=LR label="{<f0> core/mass-edit38 |<f1> Mass edit cells in column Risk}"];
+"core/mass-edit39" [shape=record rankdir=LR label="{<f0> core/mass-edit39 |<f1> Mass edit cells in column Risk}"];
+"core/text-transform40" [shape=record rankdir=LR label="{<f0> core/text-transform40 |<f1> Text transform on cells in column Facility Type using expression grel\:if(value==null,\"Restaurant\",value)}"];
+"core/text-transform41" [shape=record rankdir=LR label="{<f0> core/text-transform41 |<f1> Text transform on cells in column Facility Type using expression grel\:if(value==null,\"Grocery Store\",value)}"];
+"core/text-transform42" [shape=record rankdir=LR label="{<f0> core/text-transform42 |<f1> Text transform on cells in column Facility Type using expression grel\:if(value==null,\"Grocery Store\",value)}"];
+"core/text-transform43" [shape=record rankdir=LR label="{<f0> core/text-transform43 |<f1> Text transform on cells in column Facility Type using expression grel\:if(value==null,\"Restaurant\",value)}"];
+"core/text-transform44" [shape=record rankdir=LR label="{<f0> core/text-transform44 |<f1> Text transform on cells in column Facility Type using expression grel\:if(value==null,\"Liquor\",value)}"];
+"core/text-transform45" [shape=record rankdir=LR label="{<f0> core/text-transform45 |<f1> Text transform on cells in column Facility Type using expression grel\:if(value==null,\"Grocery Store\",value)}"];
+"core/text-transform46" [shape=record rankdir=LR label="{<f0> core/text-transform46 |<f1> Text transform on cells in column Facility Type using expression grel\:if(value==null,\"Daycare\",value)}"];
+"core/text-transform47" [shape=record rankdir=LR label="{<f0> core/text-transform47 |<f1> Text transform on cells in column Facility Type using expression grel\:if(value==null,\"Bakery\",value)}"];
+"core/text-transform48" [shape=record rankdir=LR label="{<f0> core/text-transform48 |<f1> Text transform on cells in column Facility Type using expression grel\:if(value==null,\"Bar\",value)}"];
+"core/text-transform49" [shape=record rankdir=LR label="{<f0> core/text-transform49 |<f1> Text transform on cells in column Risk using expression value.toNumber()}"];
+"core/text-transform50" [shape=record rankdir=LR label="{<f0> core/text-transform50 |<f1> Text transform on cells in column License # using expression value.toNumber()}"];
+"core/text-transform51" [shape=record rankdir=LR label="{<f0> core/text-transform51 |<f1> Text transform on cells in column Inspection ID using expression value.toNumber()}"];
+"core/text-transform52" [shape=record rankdir=LR label="{<f0> core/text-transform52 |<f1> Text transform on cells in column Zip using expression value.toNumber()}"];
+"core/text-transform53" [shape=record rankdir=LR label="{<f0> core/text-transform53 |<f1> Text transform on cells in column City using expression value.toTitlecase()}"];
+"core/mass-edit54" [shape=record rankdir=LR label="{<f0> core/mass-edit54 |<f1> Mass edit cells in column City}"];
+"core/mass-edit55" [shape=record rankdir=LR label="{<f0> core/mass-edit55 |<f1> Mass edit cells in column City}"];
+"core/mass-edit56" [shape=record rankdir=LR label="{<f0> core/mass-edit56 |<f1> Mass edit cells in column City}"];
+"core/mass-edit57" [shape=record rankdir=LR label="{<f0> core/mass-edit57 |<f1> Mass edit cells in column City}"];
+"core/row-removal58" [shape=record rankdir=LR label="{<f0> core/row-removal58 |<f1> Remove rows}"];
+"core/row-removal59" [shape=record rankdir=LR label="{<f0> core/row-removal59 |<f1> Remove rows}"];
+"core/row-removal60" [shape=record rankdir=LR label="{<f0> core/row-removal60 |<f1> Remove rows}"];
+"core/row-removal61" [shape=record rankdir=LR label="{<f0> core/row-removal61 |<f1> Remove rows}"];
+"core/row-removal62" [shape=record rankdir=LR label="{<f0> core/row-removal62 |<f1> Remove rows}"];
+"core/text-transform63" [shape=record rankdir=LR label="{<f0> core/text-transform63 |<f1> Text transform on cells in column DBA Name using expression value.toTitlecase()}"];
+"core/mass-edit64" [shape=record rankdir=LR label="{<f0> core/mass-edit64 |<f1> Mass edit cells in column DBA Name}"];
+"core/mass-edit65" [shape=record rankdir=LR label="{<f0> core/mass-edit65 |<f1> Mass edit cells in column DBA Name}"];
+"core/mass-edit66" [shape=record rankdir=LR label="{<f0> core/mass-edit66 |<f1> Mass edit cells in column DBA Name}"];
+"core/text-transform67" [shape=record rankdir=LR label="{<f0> core/text-transform67 |<f1> Text transform on cells in column Address using expression value.toTitlecase()}"];
+"core/mass-edit68" [shape=record rankdir=LR label="{<f0> core/mass-edit68 |<f1> Mass edit cells in column Address}"];
+"core/mass-edit69" [shape=record rankdir=LR label="{<f0> core/mass-edit69 |<f1> Mass edit cells in column Address}"];
+"core/text-transform70" [shape=record rankdir=LR label="{<f0> core/text-transform70 |<f1> Text transform on cells in column Inspection Date using expression value.toDate()}"];
+"core/column-removal71" [shape=record rankdir=LR label="{<f0> core/column-removal71 |<f1> Remove column AKA Name}"];
+"core/column-removal72" [shape=record rankdir=LR label="{<f0> core/column-removal72 |<f1> Remove column Latitude}"];
+"core/column-removal73" [shape=record rankdir=LR label="{<f0> core/column-removal73 |<f1> Remove column Longitude}"];
+"core/column-removal74" [shape=record rankdir=LR label="{<f0> core/column-removal74 |<f1> Remove column Location}"];
+"core/text-transform75" [shape=record rankdir=LR label="{<f0> core/text-transform75 |<f1> Text transform on cells in column Results using expression value.toTitlecase()}"];
+"core/text-transform76" [shape=record rankdir=LR label="{<f0> core/text-transform76 |<f1> Text transform on cells in column Inspection Type using expression value.toTitlecase()}"];
+"core/mass-edit77" [shape=record rankdir=LR label="{<f0> core/mass-edit77 |<f1> Mass edit cells in column Inspection Type}"];
+CombineDataCleaningChanges
+
+/* Style for nodes representing non-parameter data channels in workflow */
+node[shape=box style="rounded,filled" fillcolor="#FFFFCC" peripheries=1 fontname=Helvetica]
+
+/* Nodes for non-parameter data channels in workflow */
+CleanData
+Facility_Type
+Facility_Type_1
+Facility_Type_2
+Facility_Type_3
+Facility_Type_4
+Facility_Type_5
+Facility_Type_6
+Facility_Type_7
+Facility_Type_8
+Facility_Type_9
+Facility_Type_10
+Facility_Type_11
+Facility_Type_12
+Facility_Type_13
+Facility_Type_14
+Facility_Type_15
+Facility_Type_16
+Facility_Type_17
+Facility_Type_18
+Facility_Type_Secondary
+Facility_Type_Secondary_1
+Facility_Type_19
+Facility_Type_20
+Facility_Type_21
+Facility_Type_22
+Facility_Type_23
+Facility_Type_24
+Facility_Type_25
+Facility_Type_26
+Facility_Type_Secondary_2
+Facility_Type_Secondary_3
+Facility_Type_Secondary_4
+Facility_Type_27
+Facility_Type_Secondary_5
+Facility_Type_28
+Risk
+Risk_1
+Risk_2
+Risk_3
+Risk_4
+Facility_Type_29
+Facility_Type_30
+Facility_Type_31
+Facility_Type_32
+Facility_Type_33
+Facility_Type_34
+Facility_Type_35
+Facility_Type_36
+Facility_Type_37
+Risk_5
+"License_#"
+Inspection_ID
+Zip
+City
+City_1
+City_2
+City_3
+City_4
+Starred_Rows
+City_5
+"License_#_1"
+"License_#_2"
+Facility_Type_38
+DBA_Name
+DBA_Name_1
+DBA_Name_2
+DBA_Name_3
+Address
+Address_1
+Address_2
+Inspection_Date
+AKA_Name
+Latitude
+Longitude
+Location
+Results
+Inspection_Type
+Inspection_Type_1
+Facility_Type_39
+Facility_Type_Secondary_6
+Risk_6
+"License_#_3"
+Inspection_ID_1
+Zip_1
+City_6
+Starred_Rows_1
+DBA_Name_4
+Address_3
+Inspection_Date_1
+"remove-AKA_Name"
+"remove-Latitude"
+"remove-Longitude"
+"remove-Location"
+Results_1
+Inspection_Type_2
+
+/* Style for nodes representing parameter channels in workflow */
+node[shape=box style="rounded,filled" fillcolor="#FCFCFC" peripheries=1 fontname=Helvetica]
+
+/* Nodes representing parameter channels in workflow */
+"expression:value.toTitlecase()"
+"expression:value"
+"expression:grel:value.replace(/.*./,_\"Daycare\")"
+"expression:grel:value.replace(/.And./,_\"/\")"
+"expression:grel:value.replace(/.&./,_\"/\")"
+"expression:grel:value.replace(/.*./,_\"Candy_Store\")"
+"expression:grel:value.split(\"/\")[0]"
+"expression:value.trim()"
+"expression:grel:value.replace(/.*./,\"Mobile_Food\")"
+"expression:grel:value.replace(/.*./,\"Restaurant\")"
+"expression:grel:value.replace(/.*./,\"Dollar_Store\")"
+"expression:grel:value.replace(/.*./,\"Gas_Station\")"
+"expression:grel:value.replace(/.*./,\"Liquor\")"
+"expression:grel:value.replace(/.*./,\"Grocery_Store\")"
+"expression:grel:value.replace(/.*./,\"Banquet\")"
+"expression:grel:value.replace(/.*./,\"Convenience_Store\")"
+"mode:row-based"
+"expression:grel:if(value==null,\"Restaurant\",value)"
+"expression:grel:if(value==null,\"Grocery_Store\",value)"
+"expression:grel:if(value==null,\"Liquor\",value)"
+"expression:grel:if(value==null,\"Daycare\",value)"
+"expression:grel:if(value==null,\"Bakery\",value)"
+"expression:grel:if(value==null,\"Bar\",value)"
+"expression:value.toNumber()"
+"expression:value.toDate()"
+
+/* Edges representing connections between programs and channels */
+"core/text-transform0" -> Facility_Type_1
+"expression:value.toTitlecase()" -> "core/text-transform0"
+Facility_Type -> "core/text-transform0"
+"core/mass-edit1" -> Facility_Type_2
+"expression:value" -> "core/mass-edit1"
+Facility_Type_1 -> "core/mass-edit1"
+"core/mass-edit2" -> Facility_Type_3
+"expression:value" -> "core/mass-edit2"
+Facility_Type_2 -> "core/mass-edit2"
+"core/mass-edit3" -> Facility_Type_4
+"expression:value" -> "core/mass-edit3"
+Facility_Type_3 -> "core/mass-edit3"
+"core/mass-edit4" -> Facility_Type_5
+"expression:value" -> "core/mass-edit4"
+Facility_Type_4 -> "core/mass-edit4"
+"core/mass-edit5" -> Facility_Type_6
+"expression:value" -> "core/mass-edit5"
+Facility_Type_5 -> "core/mass-edit5"
+"core/mass-edit6" -> Facility_Type_7
+"expression:value" -> "core/mass-edit6"
+Facility_Type_6 -> "core/mass-edit6"
+"core/mass-edit7" -> Facility_Type_8
+"expression:value" -> "core/mass-edit7"
+Facility_Type_7 -> "core/mass-edit7"
+"core/mass-edit8" -> Facility_Type_9
+"expression:value" -> "core/mass-edit8"
+Facility_Type_8 -> "core/mass-edit8"
+"core/mass-edit9" -> Facility_Type_10
+"expression:value" -> "core/mass-edit9"
+Facility_Type_9 -> "core/mass-edit9"
+"core/text-transform10" -> Facility_Type_11
+"expression:grel:value.replace(/.*./,_\"Daycare\")" -> "core/text-transform10"
+Facility_Type_10 -> "core/text-transform10"
+"core/text-transform11" -> Facility_Type_12
+"expression:grel:value.replace(/.And./,_\"/\")" -> "core/text-transform11"
+Facility_Type_11 -> "core/text-transform11"
+"core/text-transform12" -> Facility_Type_13
+"expression:grel:value.replace(/.&./,_\"/\")" -> "core/text-transform12"
+Facility_Type_12 -> "core/text-transform12"
+"core/mass-edit13" -> Facility_Type_14
+"expression:value" -> "core/mass-edit13"
+Facility_Type_13 -> "core/mass-edit13"
+"core/text-transform14" -> Facility_Type_15
+"expression:grel:value.replace(/.*./,_\"Candy_Store\")" -> "core/text-transform14"
+Facility_Type_14 -> "core/text-transform14"
+"core/mass-edit15" -> Facility_Type_16
+"expression:value" -> "core/mass-edit15"
+Facility_Type_15 -> "core/mass-edit15"
+"core/mass-edit16" -> Facility_Type_17
+"expression:value" -> "core/mass-edit16"
+Facility_Type_16 -> "core/mass-edit16"
+"core/mass-edit17" -> Facility_Type_18
+"expression:value" -> "core/mass-edit17"
+Facility_Type_17 -> "core/mass-edit17"
+"core/text-transform18" -> Facility_Type_19
+"expression:grel:value.split(\"/\")[0]" -> "core/text-transform18"
+Facility_Type_18 -> "core/text-transform18"
+"core/text-transform19" -> Facility_Type_Secondary_1
+"expression:value.trim()" -> "core/text-transform19"
+Facility_Type_Secondary -> "core/text-transform19"
+"core/text-transform20" -> Facility_Type_Secondary_2
+"expression:value.toTitlecase()" -> "core/text-transform20"
+Facility_Type_Secondary_1 -> "core/text-transform20"
+"core/text-transform21" -> Facility_Type_20
+"expression:value.trim()" -> "core/text-transform21"
+Facility_Type_19 -> "core/text-transform21"
+"core/text-transform22" -> Facility_Type_21
+"expression:grel:value.replace(/.*./,\"Mobile_Food\")" -> "core/text-transform22"
+Facility_Type_20 -> "core/text-transform22"
+"core/text-transform23" -> Facility_Type_22
+"expression:grel:value.replace(/.*./,\"Restaurant\")" -> "core/text-transform23"
+Facility_Type_21 -> "core/text-transform23"
+"core/text-transform24" -> Facility_Type_23
+"expression:grel:value.replace(/.*./,\"Mobile_Food\")" -> "core/text-transform24"
+Facility_Type_22 -> "core/text-transform24"
+"core/text-transform25" -> Facility_Type_24
+"expression:grel:value.replace(/.*./,\"Dollar_Store\")" -> "core/text-transform25"
+Facility_Type_23 -> "core/text-transform25"
+"core/text-transform26" -> Facility_Type_25
+"expression:grel:value.replace(/.*./,\"Gas_Station\")" -> "core/text-transform26"
+Facility_Type_24 -> "core/text-transform26"
+"core/text-transform27" -> Facility_Type_26
+"expression:grel:value.replace(/.*./,\"Liquor\")" -> "core/text-transform27"
+Facility_Type_25 -> "core/text-transform27"
+"core/text-transform28" -> Facility_Type_27
+"expression:grel:value.replace(/.*./,\"Grocery_Store\")" -> "core/text-transform28"
+Facility_Type_26 -> "core/text-transform28"
+"core/mass-edit29" -> Facility_Type_Secondary_3
+"expression:value" -> "core/mass-edit29"
+Facility_Type_Secondary_2 -> "core/mass-edit29"
+"core/mass-edit30" -> Facility_Type_Secondary_4
+"expression:value" -> "core/mass-edit30"
+Facility_Type_Secondary_3 -> "core/mass-edit30"
+"core/mass-edit31" -> Facility_Type_Secondary_5
+"expression:value" -> "core/mass-edit31"
+Facility_Type_Secondary_4 -> "core/mass-edit31"
+"core/text-transform32" -> Facility_Type_28
+"expression:grel:value.replace(/.*./,\"Banquet\")" -> "core/text-transform32"
+Facility_Type_27 -> "core/text-transform32"
+"core/text-transform33" -> Facility_Type_Secondary_6
+"expression:grel:value.replace(/.*./,\"Banquet\")" -> "core/text-transform33"
+Facility_Type_Secondary_5 -> "core/text-transform33"
+"core/text-transform34" -> Facility_Type_29
+"expression:grel:value.replace(/.*./,\"Convenience_Store\")" -> "core/text-transform34"
+Facility_Type_28 -> "core/text-transform34"
+"core/row-removal35" -> Risk_1
+"mode:row-based" -> "core/row-removal35"
+Risk -> "core/row-removal35"
+"core/row-removal36" -> Risk_2
+"mode:row-based" -> "core/row-removal36"
+Risk_1 -> "core/row-removal36"
+"core/mass-edit37" -> Risk_3
+"expression:value" -> "core/mass-edit37"
+Risk_2 -> "core/mass-edit37"
+"core/mass-edit38" -> Risk_4
+"expression:value" -> "core/mass-edit38"
+Risk_3 -> "core/mass-edit38"
+"core/mass-edit39" -> Risk_5
+"expression:value" -> "core/mass-edit39"
+Risk_4 -> "core/mass-edit39"
+"core/text-transform40" -> Facility_Type_30
+"expression:grel:if(value==null,\"Restaurant\",value)" -> "core/text-transform40"
+Facility_Type_29 -> "core/text-transform40"
+"core/text-transform41" -> Facility_Type_31
+"expression:grel:if(value==null,\"Grocery_Store\",value)" -> "core/text-transform41"
+Facility_Type_30 -> "core/text-transform41"
+"core/text-transform42" -> Facility_Type_32
+"expression:grel:if(value==null,\"Grocery_Store\",value)" -> "core/text-transform42"
+Facility_Type_31 -> "core/text-transform42"
+"core/text-transform43" -> Facility_Type_33
+"expression:grel:if(value==null,\"Restaurant\",value)" -> "core/text-transform43"
+Facility_Type_32 -> "core/text-transform43"
+"core/text-transform44" -> Facility_Type_34
+"expression:grel:if(value==null,\"Liquor\",value)" -> "core/text-transform44"
+Facility_Type_33 -> "core/text-transform44"
+"core/text-transform45" -> Facility_Type_35
+"expression:grel:if(value==null,\"Grocery_Store\",value)" -> "core/text-transform45"
+Facility_Type_34 -> "core/text-transform45"
+"core/text-transform46" -> Facility_Type_36
+"expression:grel:if(value==null,\"Daycare\",value)" -> "core/text-transform46"
+Facility_Type_35 -> "core/text-transform46"
+"core/text-transform47" -> Facility_Type_37
+"expression:grel:if(value==null,\"Bakery\",value)" -> "core/text-transform47"
+Facility_Type_36 -> "core/text-transform47"
+"core/text-transform48" -> Facility_Type_38
+"expression:grel:if(value==null,\"Bar\",value)" -> "core/text-transform48"
+Facility_Type_37 -> "core/text-transform48"
+"core/text-transform49" -> Risk_6
+"expression:value.toNumber()" -> "core/text-transform49"
+Risk_5 -> "core/text-transform49"
+"core/text-transform50" -> "License_#_1"
+"expression:value.toNumber()" -> "core/text-transform50"
+"License_#" -> "core/text-transform50"
+"core/text-transform51" -> Inspection_ID_1
+"expression:value.toNumber()" -> "core/text-transform51"
+Inspection_ID -> "core/text-transform51"
+"core/text-transform52" -> Zip_1
+"expression:value.toNumber()" -> "core/text-transform52"
+Zip -> "core/text-transform52"
+"core/text-transform53" -> City_1
+"expression:value.toTitlecase()" -> "core/text-transform53"
+City -> "core/text-transform53"
+"core/mass-edit54" -> City_2
+"expression:value" -> "core/mass-edit54"
+City_1 -> "core/mass-edit54"
+"core/mass-edit55" -> City_3
+"expression:value" -> "core/mass-edit55"
+City_2 -> "core/mass-edit55"
+"core/mass-edit56" -> City_4
+"expression:value" -> "core/mass-edit56"
+City_3 -> "core/mass-edit56"
+"core/mass-edit57" -> City_5
+"expression:value" -> "core/mass-edit57"
+City_4 -> "core/mass-edit57"
+"core/row-removal58" -> Starred_Rows_1
+"mode:row-based" -> "core/row-removal58"
+Starred_Rows -> "core/row-removal58"
+"core/row-removal59" -> City_6
+"mode:row-based" -> "core/row-removal59"
+City_5 -> "core/row-removal59"
+"core/row-removal60" -> "License_#_2"
+"mode:row-based" -> "core/row-removal60"
+"License_#_1" -> "core/row-removal60"
+"core/row-removal61" -> "License_#_3"
+"mode:row-based" -> "core/row-removal61"
+"License_#_2" -> "core/row-removal61"
+"core/row-removal62" -> Facility_Type_39
+"mode:row-based" -> "core/row-removal62"
+Facility_Type_38 -> "core/row-removal62"
+"core/text-transform63" -> DBA_Name_1
+"expression:value.toTitlecase()" -> "core/text-transform63"
+DBA_Name -> "core/text-transform63"
+"core/mass-edit64" -> DBA_Name_2
+"expression:value" -> "core/mass-edit64"
+DBA_Name_1 -> "core/mass-edit64"
+"core/mass-edit65" -> DBA_Name_3
+"expression:value" -> "core/mass-edit65"
+DBA_Name_2 -> "core/mass-edit65"
+"core/mass-edit66" -> DBA_Name_4
+"expression:value" -> "core/mass-edit66"
+DBA_Name_3 -> "core/mass-edit66"
+"core/text-transform67" -> Address_1
+"expression:value.toTitlecase()" -> "core/text-transform67"
+Address -> "core/text-transform67"
+"core/mass-edit68" -> Address_2
+"expression:value" -> "core/mass-edit68"
+Address_1 -> "core/mass-edit68"
+"core/mass-edit69" -> Address_3
+"expression:value" -> "core/mass-edit69"
+Address_2 -> "core/mass-edit69"
+"core/text-transform70" -> Inspection_Date_1
+"expression:value.toDate()" -> "core/text-transform70"
+Inspection_Date -> "core/text-transform70"
+"core/column-removal71" -> "remove-AKA_Name"
+AKA_Name -> "core/column-removal71"
+"core/column-removal72" -> "remove-Latitude"
+Latitude -> "core/column-removal72"
+"core/column-removal73" -> "remove-Longitude"
+Longitude -> "core/column-removal73"
+"core/column-removal74" -> "remove-Location"
+Location -> "core/column-removal74"
+"core/text-transform75" -> Results_1
+"expression:value.toTitlecase()" -> "core/text-transform75"
+Results -> "core/text-transform75"
+"core/text-transform76" -> Inspection_Type_1
+"expression:value.toTitlecase()" -> "core/text-transform76"
+Inspection_Type -> "core/text-transform76"
+"core/mass-edit77" -> Inspection_Type_2
+"expression:value" -> "core/mass-edit77"
+Inspection_Type_1 -> "core/mass-edit77"
+CombineDataCleaningChanges -> CleanData
+Facility_Type_39 -> CombineDataCleaningChanges
+Facility_Type_Secondary_6 -> CombineDataCleaningChanges
+Risk_6 -> CombineDataCleaningChanges
+"License_#_3" -> CombineDataCleaningChanges
+Inspection_ID_1 -> CombineDataCleaningChanges
+Zip_1 -> CombineDataCleaningChanges
+City_6 -> CombineDataCleaningChanges
+Starred_Rows_1 -> CombineDataCleaningChanges
+DBA_Name_4 -> CombineDataCleaningChanges
+Address_3 -> CombineDataCleaningChanges
+Inspection_Date_1 -> CombineDataCleaningChanges
+AKA_Name -> CombineDataCleaningChanges
+"remove-AKA_Name" -> CombineDataCleaningChanges
+Latitude -> CombineDataCleaningChanges
+"remove-Latitude" -> CombineDataCleaningChanges
+Longitude -> CombineDataCleaningChanges
+"remove-Longitude" -> CombineDataCleaningChanges
+Location -> CombineDataCleaningChanges
+"remove-Location" -> CombineDataCleaningChanges
+Results_1 -> CombineDataCleaningChanges
+Inspection_Type_2 -> CombineDataCleaningChanges
+
+/* End of double cluster for drawing box around nodes in workflow */
+}}
+
+/* End of top-level graph */
+}
