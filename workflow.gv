@@ -93,6 +93,7 @@ node[shape=box style=filled fillcolor="#CCFFCC" peripheries=1 fontname=Helvetica
 "core/text-transform75" [shape=record rankdir=LR label="{<f0> core/text-transform75 |<f1> Text transform on cells in column Results using expression value.toTitlecase()}"];
 "core/text-transform76" [shape=record rankdir=LR label="{<f0> core/text-transform76 |<f1> Text transform on cells in column Inspection Type using expression value.toTitlecase()}"];
 "core/mass-edit77" [shape=record rankdir=LR label="{<f0> core/mass-edit77 |<f1> Mass edit cells in column Inspection Type}"];
+"core/column-rename78" [shape=record rankdir=LR label="{<f0> core/column-rename78 |<f1> Rename column License # to License Number}"];
 CombineDataCleaningChanges
 
 /* Style for nodes representing non-parameter data channels in workflow */
@@ -178,10 +179,10 @@ Location
 Results
 Inspection_Type
 Inspection_Type_1
+"License_#_3"
 Facility_Type_39
 Facility_Type_Secondary_6
 Risk_6
-"License_#_3"
 Inspection_ID_1
 Zip_1
 City_6
@@ -195,6 +196,7 @@ Inspection_Date_1
 "remove-Location"
 Results_1
 Inspection_Type_2
+License_Number
 
 /* Style for nodes representing parameter channels in workflow */
 node[shape=box style="rounded,filled" fillcolor="#FCFCFC" peripheries=1 fontname=Helvetica]
@@ -225,6 +227,8 @@ node[shape=box style="rounded,filled" fillcolor="#FCFCFC" peripheries=1 fontname
 "expression:grel:if(value==null,\"Bar\",value)"
 "expression:value.toNumber()"
 "expression:value.toDate()"
+"oldColumnName:License_#"
+"newColumnName:License_Number"
 
 /* Edges representing connections between programs and channels */
 "core/text-transform0" -> Facility_Type_1
@@ -457,6 +461,10 @@ Inspection_Type -> "core/text-transform76"
 "core/mass-edit77" -> Inspection_Type_2
 "expression:value" -> "core/mass-edit77"
 Inspection_Type_1 -> "core/mass-edit77"
+"core/column-rename78" -> License_Number
+"oldColumnName:License_#" -> "core/column-rename78"
+"newColumnName:License_Number" -> "core/column-rename78"
+"License_#_3" -> "core/column-rename78"
 CombineDataCleaningChanges -> CleanData
 Facility_Type_39 -> CombineDataCleaningChanges
 Facility_Type_Secondary_6 -> CombineDataCleaningChanges
@@ -479,6 +487,7 @@ Location -> CombineDataCleaningChanges
 "remove-Location" -> CombineDataCleaningChanges
 Results_1 -> CombineDataCleaningChanges
 Inspection_Type_2 -> CombineDataCleaningChanges
+License_Number -> CombineDataCleaningChanges
 
 /* End of double cluster for drawing box around nodes in workflow */
 }}
